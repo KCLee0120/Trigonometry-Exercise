@@ -12,11 +12,11 @@ function setTrigo(){
   var thetaRange = range[quadrant-1][0];
 
   if (givenTrigo == 1)
-    var question = document.createTextNode("Given that " + "sin $\\theta = " + sign + " \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][2] + "}$" + ", where " + thetaRange + ", find the range of cos $\\theta$ and tan $\\theta$.");
+    var question = document.createTextNode("Given that " + "sin $\\theta = " + sign + " \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][2] + "}$" + ", where " + thetaRange + ", find the values of cos $\\theta$ and tan $\\theta$.");
     else if (givenTrigo == 2)
-      var question = document.createTextNode("Given that " + "cos $\\theta = " + sign + " \\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$" + ", where " + thetaRange + ", find the range of sin $\\theta$ and tan $\\theta$.");
+      var question = document.createTextNode("Given that " + "cos $\\theta = " + sign + " \\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$" + ", where " + thetaRange + ", find the values of sin $\\theta$ and tan $\\theta$.");
       else
-        var question = document.createTextNode("Given that " + "tan $\\theta = " + sign + " \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$" + ", where " + thetaRange + ", find the range of sin $\\theta$ and cos $\\theta$.");
+        var question = document.createTextNode("Given that " + "tan $\\theta = " + sign + " \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$" + ", where " + thetaRange + ", find the values of sin $\\theta$ and cos $\\theta$.");
 
 
   var x = document.createElement("div");
