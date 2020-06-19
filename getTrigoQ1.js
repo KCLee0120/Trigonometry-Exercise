@@ -40,16 +40,95 @@ function setTrigo(){
             else if (quadrant == 2 || quadrant == 3)
               {x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$x = " + pythUnknowns[unknown][1] + "$ (rejected) \xa0or\xa0 $x = -" + Math.sqrt(pythUnknowns[unknown][2]*pythUnknowns[unknown][2]-pythUnknowns[unknown][0]*pythUnknowns[unknown][0]) + "$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
                     if (quadrant == 1)
-                        {x.appendChild(document.createTextNode("$\\therefore$ cos $\\theta = -\\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$, tan $\\theta = -\\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+                        {x.appendChild(document.createTextNode("$\\therefore$ cos $\\theta = \\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$, tan $\\theta = \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
                           else if (quadrant == 2)
-                            {x.appendChild(document.createTextNode("$\\therefore$ cos $\\theta = \\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$, tan $\\theta = \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+                            {x.appendChild(document.createTextNode("$\\therefore$ cos $\\theta = - \\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$, tan $\\theta = - \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
                             else if (quadrant == 3)
                               {x.appendChild(document.createTextNode("$\\therefore$ cos $\\theta = -\\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$, tan $\\theta = \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
                               else if (quadrant == 4)
                                 {x.appendChild(document.createTextNode("$\\therefore$ cos $\\theta = \\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$, tan $\\theta = -\\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
    }
 
+   if(givenTrigo==2){
+     x.appendChild(document.createTextNode("$\\because$ " + range[quadrant-1][0])); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     x.appendChild(document.createTextNode("$\\therefore$ " + range[quadrant-1][1])); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     x.appendChild(document.createTextNode("Let \xa0$P(x, y)$\xa0 be a point on the terminal side of \xa0$\\theta$\xa0 and \xa0$OP=r$ .")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     x.appendChild(document.createTextNode("$\\because$ cos $\\theta = \\frac{x}{r} = \\frac{" + sign + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     x.appendChild(document.createTextNode("$\\therefore$ Let \xa0$x = " + sign + pythUnknowns[unknown][1] + "$ \xa0and\xa0 $r =  " + pythUnknowns[unknown][2] + "$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$r = \\sqrt{x^2+y^2}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$" + pythUnknowns[unknown][2] + " = \\sqrt{(" + sign + pythUnknowns[unknown][1] + ")^2 + y^2}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$" + pythUnknowns[unknown][2] + "^2 = (" + sign + pythUnknowns[unknown][1] + ")^2 + y^2$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$y^2 = " + (pythUnknowns[unknown][2]*pythUnknowns[unknown][2]-pythUnknowns[unknown][1]*pythUnknowns[unknown][1]) + "$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+        if (quadrant == 1 || quadrant == 2)
+          {x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$y = " + pythUnknowns[unknown][0] + "$ \xa0or\xa0 $y = -" + Math.sqrt(pythUnknowns[unknown][2]*pythUnknowns[unknown][2]-pythUnknowns[unknown][1]*pythUnknowns[unknown][1]) + "$ (rejected)")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+            else if (quadrant == 3 || quadrant == 4)
+              {x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$y = " + pythUnknowns[unknown][0] + "$ (rejected) \xa0or\xa0 $y = -" + Math.sqrt(pythUnknowns[unknown][2]*pythUnknowns[unknown][2]-pythUnknowns[unknown][1]*pythUnknowns[unknown][1]) + "$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+                    if (quadrant == 1)
+                        {x.appendChild(document.createTextNode("$\\therefore$ sin $\\theta = \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][2] + "}$, tan $\\theta = \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+                          else if (quadrant == 2)
+                            {x.appendChild(document.createTextNode("$\\therefore$ sin $\\theta = \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][2] + "}$, tan $\\theta = -\\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+                            else if (quadrant == 3)
+                              {x.appendChild(document.createTextNode("$\\therefore$ sin $\\theta = -\\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][2] + "}$, tan $\\theta = \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+                              else if (quadrant == 4)
+                                {x.appendChild(document.createTextNode("$\\therefore$ sin $\\theta = -\\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][2] + "}$, tan $\\theta = -\\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+   }
 
+   if(givenTrigo==3){
+     x.appendChild(document.createTextNode("$\\because$ " + range[quadrant-1][0])); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     x.appendChild(document.createTextNode("$\\therefore$ " + range[quadrant-1][1])); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     x.appendChild(document.createTextNode("Let \xa0$P(x, y)$\xa0 be a point on the terminal side of \xa0$\\theta$\xa0 and \xa0$OP=r$ .")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+     if(quadrant == 1){
+      x.appendChild(document.createTextNode("$\\because$ tan $\\theta = \\frac{y}{x} = \\frac{"  + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+      else if(quadrant ==2){
+        x.appendChild(document.createTextNode("$\\because$ tan $\\theta = \\frac{y}{x} = \\frac{" + pythUnknowns[unknown][0] + "}{-" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+      else if(quadrant ==3){
+        x.appendChild(document.createTextNode("$\\because$ tan $\\theta = \\frac{y}{x} = \\frac{-" + pythUnknowns[unknown][0] + "}{-" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+      else if(quadrant ==4){
+        x.appendChild(document.createTextNode("$\\because$ tan $\\theta = \\frac{y}{x} = \\frac{-" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][1] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+
+     if(quadrant == 1){
+       x.appendChild(document.createTextNode("$\\therefore$ Let \xa0$x = " + pythUnknowns[unknown][1] + "$ \xa0and\xa0 $y =  " + pythUnknowns[unknown][0] + "$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+      else if(quadrant ==2){
+        x.appendChild(document.createTextNode("$\\therefore$ Let \xa0$x = -" + pythUnknowns[unknown][1] + "$ \xa0and\xa0 $y =  " + pythUnknowns[unknown][0] + "$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+      else if(quadrant ==3){
+        x.appendChild(document.createTextNode("$\\therefore$ Let \xa0$x = -" + pythUnknowns[unknown][1] + "$ \xa0and\xa0 $y =  -" + pythUnknowns[unknown][0] + "$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+      else if(quadrant ==4){
+        x.appendChild(document.createTextNode("$\\therefore$ Let \xa0$x = " + pythUnknowns[unknown][1] + "$ \xa0and\xa0 $y = - " + pythUnknowns[unknown][0] + "$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+
+     x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$r = \\sqrt{x^2+y^2}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+
+     if(quadrant == 1){
+       x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$r = \\sqrt{(" + pythUnknowns[unknown][1] + ")^2+(" + pythUnknowns[unknown][0] + ")^2}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+      else if(quadrant ==2){
+        x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$r = \\sqrt{(-" + pythUnknowns[unknown][1] + ")^2+(" + pythUnknowns[unknown][0] + ")^2}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+      else if(quadrant ==3){
+        x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$r = \\sqrt{(" + pythUnknowns[unknown][1] + ")^2+(-" + pythUnknowns[unknown][0] + ")^2}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+      else if(quadrant ==4){
+        x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$r = \\sqrt{(-" + pythUnknowns[unknown][1] + ")^2+(-" + pythUnknowns[unknown][0] + ")^2}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+      }
+
+     x.appendChild(document.createTextNode("\xa0\xa0\xa0\xa0$r = " + pythUnknowns[unknown][2] + "$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));
+
+                    if (quadrant == 1)
+                        {x.appendChild(document.createTextNode("$\\therefore$ sin $\\theta = \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][2] + "}$, cos $\\theta = \\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+                          else if (quadrant == 2)
+                            {x.appendChild(document.createTextNode("$\\therefore$ sin $\\theta = \\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][2] + "}$, cos $\\theta = -\\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+                            else if (quadrant == 3)
+                              {x.appendChild(document.createTextNode("$\\therefore$ sin $\\theta = -\\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][2] + "}$, cos $\\theta = - \\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+                              else if (quadrant == 4)
+                                {x.appendChild(document.createTextNode("$\\therefore$ sin $\\theta = -\\frac{" + pythUnknowns[unknown][0] + "}{" + pythUnknowns[unknown][2] + "}$, cos $\\theta = -\\frac{" + pythUnknowns[unknown][1] + "}{" + pythUnknowns[unknown][2] + "}$")); x.appendChild(document.createElement("br")); x.appendChild(document.createElement("br"));}
+   }
 
 
    x.setAttribute("style", "margin-top:30px");
